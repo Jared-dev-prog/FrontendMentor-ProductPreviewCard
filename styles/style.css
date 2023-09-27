@@ -1,0 +1,126 @@
+:root {
+  --bg_body: hsl(30, 38%, 92%);
+  --fontMonserrat: "Montserrat", sans-serif;
+  --fontFraunces: "Fraunces", serif;
+
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 3rem auto;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  background-color: var(--bg_body);
+  font-family: var(--fontMonserrat);
+}
+
+.card__image {
+  background-image: url("../images/image-product-mobile.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30rem;
+  min-width: 80%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card__content {
+  background-color: #fff;
+  padding: 2rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.card__content-label {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: hsl(228, 12%, 48%);
+  font-weight: 700;
+}
+
+.card__content-title {
+  font-family: var(--fontFraunces);
+  font-size: 3.2rem;
+}
+
+.card__content-text {
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  color: hsl(228, 12%, 48%);
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.card__price-offer {
+  font-size: 3rem;
+  color: hsl(158, 36%, 37%);
+  font-family: var(--fontFraunces);
+}
+
+.card__price-original {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+.button {
+  border: unset;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  background-color: hsl(158, 36%, 37%);
+  color: var(--White);
+  font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+  }
+  .card {
+    display: flex;
+    width: 600px;
+    height: auto;
+  }
+
+  .card__image {
+    background-image: url("../images/image-product-desktop.jpg");
+    min-height: 30rem;
+    min-width: 50%;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .card__content {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+}
